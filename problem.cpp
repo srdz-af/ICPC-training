@@ -11,6 +11,7 @@ ll dis[1005][1005];
 bool check(ll x, ll y){
     return (x >= 0 && y >= 0 && x < n && y < m);
 }
+
 void bfs(pair<ll, ll> o){
     queue<pair<ll, ll>> trav;
     trav.push(o);
@@ -46,11 +47,9 @@ int main(){
     for(int i = 0; i < n; i++){
         for(int j = 0; j < m; j++){
             cin >> mat[i][j];
-
             if(mat[i][j] > 0){
                 tes.push_back({i, j});
             }
-
         }
     }
 
@@ -58,13 +57,11 @@ int main(){
     cin >> q;
 
     for(auto it: tes){
-
         for(int i = 0; i < n; i++){
             for(int j = 0; j < m; j++){
                 vis[i][j] = -1;
             }
         }
-
         bfs(it);
     }
 
@@ -86,27 +83,3 @@ int main(){
     return 0;
 }
 
-/* 
-5 5
-0 0 0 0 0
-0 6 -1 -1 0
-0 0 -1 3 0
--1 -1 -1 -1 0
-4 -1 0 0 0
-7
-3
-6 3 4
-3
-4 3 6
-1
-6
-1
-3
-1
-4
-2
-6 3
-2
-3 6
-
-*/
