@@ -15,6 +15,7 @@
   - Basic DP
 
 ## 2
+  - Segment tree
   - Lowest common ancestor
   - Bipartite matching
   - Disjoint set union
